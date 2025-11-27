@@ -1,0 +1,60 @@
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f8;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    #menuContainer {
+      width: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .menu-item {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      padding: 15px 20px;
+      position: relative;
+    }
+
+    .menu-item:hover {
+      background: #f0f8ff;
+    }
+
+    .menu-item h1 {
+      font-size: 18px;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-item h1::after {
+      content: '+';
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item.active h1::after {
+      transform: rotate(45deg);
+    }
+
+    .menu-item span {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+      padding: 0 0;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .menu-item.active span {
+      max-height: 200px; /* lazımınca artır */
+      padding: 10px 0;
+    }
